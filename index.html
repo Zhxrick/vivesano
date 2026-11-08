@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ViveSano | Recomendaciones saludables</title>
+<meta name="description" content="Prototipo navegable de ViveSano, página de recomendaciones saludables. ACA Ingeniería Web - CUN.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<a class="saltar" href="#contenido">Saltar al contenido</a>
+
+<header class="cabecera">
+  <div class="contenedor cabecera__fila">
+    <a href="#/inicio" class="logo" aria-label="ViveSano, ir al inicio">
+      <span class="logo__icono">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></svg>
+      </span>
+      <span class="logo__texto">Vive<b>Sano</b></span>
+    </a>
+    <nav class="menu" id="menu" aria-label="Menú principal">
+      <a href="#/inicio" data-ruta="inicio">Inicio</a>
+      <a href="#/recomendaciones" data-ruta="recomendaciones">Recomendaciones</a>
+      <a href="#/favoritos" data-ruta="favoritos">Favoritos</a>
+      <a href="#/habitos" data-ruta="habitos">Mis hábitos</a>
+      <a href="#/admin" data-ruta="admin" class="solo-admin">Contenidos</a>
+    </nav>
+    <div class="cabecera__acciones" id="zonaUsuario"></div>
+    <button class="btn-menu" id="btnMenu" aria-label="Abrir menú" aria-expanded="false">
+      <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="contenido" tabindex="-1"></main>
+
+<footer class="pie">
+  <div class="contenedor pie__fila">
+    <div>
+      <span class="logo__texto">Vive<b>Sano</b></span>
+      <p class="pie__texto">Recomendaciones de alimentación, actividad física, descanso y bienestar. La información es orientativa y no reemplaza la consulta médica.</p>
+    </div>
+    <div class="pie__links">
+      <a href="#/privacidad">Política de privacidad</a>
+      <a href="#/privacidad">Términos de uso</a>
+      <a href="#/inicio">Contacto</a>
+    </div>
+  </div>
+  <p class="pie__copy contenedor">Prototipo académico · Ingeniería Web · CUN 2026</p>
+</footer>
+
+<nav class="barra-movil" aria-label="Navegación móvil">
+  <a href="#/inicio" data-ruta="inicio"><svg viewBox="0 0 24 24"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg>Inicio</a>
+  <a href="#/recomendaciones" data-ruta="recomendaciones"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>Buscar</a>
+  <a href="#/favoritos" data-ruta="favoritos"><svg viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-9.3-9.2C1.4 8.4 3.6 5 7 5c2 0 3.3 1 5 3 1.7-2 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8C19.5 16.4 12 21 12 21z"/></svg>Favoritos</a>
+  <a href="#/habitos" data-ruta="habitos"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>Hábitos</a>
+  <a href="#/perfil" data-ruta="perfil"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Perfil</a>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="datos.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
